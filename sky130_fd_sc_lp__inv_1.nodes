@@ -1,0 +1,6 @@
+VGND 0 0 m1
+Y 126 538 li
+VPWR 0 616 m1
+A 30 316 li
+VPB 0 616 nw
+VNB 0 0 pw

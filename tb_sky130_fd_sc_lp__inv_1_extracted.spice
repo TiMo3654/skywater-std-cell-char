@@ -1,0 +1,26 @@
+* SkyWater PDK
+* Inverter from fd_sc_lp lib
+
+.param mc_mm_switch=0
+.include "/mnt/data/pdk/skywater/share/pdk/sky130A/libs.tech/ngspice/corners/tt.spice"
+.include "./sky130_fd_sc_lp__inv_1.spice"
+
+* voltage sources
+
+Vdd vdd gnd DC 0.8
+Vp in gnd pulse(0 0.8 0p 200p 100p 1n 2n)
+
+* circuit
+
+X1 in gnd vdd gnd vdd out sky130_fd_sc_lp__inv_1
+
+* simulation
+
+.tran 1ps 10ns 10p 
+
+.control
+run
+plot in out
+.endc
+
+

@@ -1,0 +1,51 @@
+scale 1000 1 500000
+rnode "VNB.t0" 0 0 97 136 0
+rnode "VNB" 0 0 0 0 0
+resist "VNB" "VNB.t0" 2232.84
+rnode "VGND.t0" 0 0 82 136 0
+rnode "VGND" 0 0 0 0 0
+resist "VGND" "VGND.t0" 182.84
+rnode "VPB.t0" 0 0 97 493 0
+rnode "VPB" 0 0 0 616 0
+resist "VPB" "VPB.t0" 436.007
+rnode "Y.t1" 0 0 112 493 0
+rnode "Y.n0" 0 0 140 487 0
+rnode "Y" 0 0 126 168 0
+rnode "Y" 0 0 126 94 0
+rnode "Y.t0" 0 0 112 136 0
+rnode "Y.n1" 0 0 140 191 0
+rnode "Y" 0 0 126 242 0
+rnode "Y" 0 0 126 316 0
+rnode "Y" 0 0 126 390 0
+rnode "Y.n2" 0 0 140 403 0
+rnode "Y" 0 0 126 464 0
+rnode "Y.n3" 0 0 140 487 0
+rnode "Y" 0 0 126 538 0
+resist "Y.n2" "Y" 3.08148
+resist "Y.n1" "Y" 5.45185
+resist "Y.n3" "Y" 5.45185
+resist "Y" "Y.n1" 12.0889
+resist "Y" "Y.n3" 12.0889
+resist "Y" "Y.n2" 14.4593
+resist "Y" "Y" 17.5407
+resist "Y" "Y" 17.5407
+resist "Y" "Y" 17.5407
+resist "Y.n0" "Y.t1" 21.8889
+resist "Y.t0" "Y" 305.106
+resist "Y.n1" "Y.t0" 309.528
+resist "Y.n2" "Y.n0" 585
+resist "Y.n3" "Y.n0" 585
+resist "Y" "Y.n0" 595.43
+rnode "A" 0 0 30 242 0
+rnode "A.t0" 0 0 97 493 0
+rnode "A.t1" 0 0 97 136 0
+rnode "A.n0" 0 0 70 275 0
+rnode "A.n1" 0 0 70 275 0
+rnode "A" 0 0 30 316 0
+resist "A.n1" "A" 6.03429
+resist "A" "A.n1" 7.49714
+resist "A.n1" "A.n0" 152
+resist "A.n0" "A.t1" 191.515
+resist "A.n0" "A.t0" 318.441
+device msubckt sky130_fd_pr__nfet_01v8 82 52 83 53  "VNB.t0" "A.t1" 60 0 "VGND.t0" 168 8904,442 "Y.t0" 168 8904,442
+device msubckt sky130_fd_pr__pfet_01v8_hvt 82 367 83 368  "VPB.t0" "A.t0" 60 0 "VPWR" 252 13356,610 "Y.t1" 252 13356,610

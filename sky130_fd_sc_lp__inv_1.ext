@@ -1,0 +1,41 @@
+timestamp 1743779262
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+parameters sky130_fd_pr__special_nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__special_pfet_01v8_hvt l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__pfet_01v8_hvt l=l w=w a1=as p1=ps a2=ad p2=pd
+port "VGND" 4 0 0 192 48 m1
+port "Y" 7 126 538 160 572 li
+port "Y" 7 126 464 160 498 li
+port "Y" 7 126 390 160 424 li
+port "Y" 7 126 316 160 350 li
+port "Y" 7 126 242 160 276 li
+port "Y" 7 126 168 160 202 li
+port "Y" 7 126 94 160 128 li
+port "VPWR" 3 0 616 192 666 m1
+port "A" 6 30 316 64 350 li
+port "A" 6 30 242 64 276 li
+port "VPB" 2 0 616 192 666 nw
+port "VNB" 1 0 0 192 48 pw
+node "VGND" 470 199.845 0 0 m1 0 0 0 0 0 0 0 0 8904 442 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19134 834 18816 580 0 0 0 0 0 0 0 0 0 0
+node "Y" 1451 126.472 126 94 li 0 0 0 0 0 0 0 0 8904 442 13356 610 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 30456 1236 0 0 0 0 0 0 0 0 0 0 0 0
+node "VPWR" 1038 180.443 0 616 m1 0 0 0 0 0 0 0 0 0 0 13356 610 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 24018 982 18816 580 0 0 0 0 0 0 0 0 0 0
+node "A" 999 198.007 30 242 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 21540 1388 0 0 7560 356 0 0 0 0 0 0 0 0 0 0 0 0
+node "VPB" 1322 299.892 0 616 nw 0 0 0 0 99964 1282 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VNB" 0 0 0 0 pw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "VPWR" "Y" 138.312
+cap "VPB" "VGND" 3.41491
+cap "A" "Y" 71.202
+cap "A" "VPWR" 58.722
+cap "Y" "VGND" 106.653
+cap "VPB" "Y" 13.7253
+cap "VPWR" "VGND" 18.7062
+cap "A" "VGND" 55.8389
+cap "VPB" "VPWR" 36.4324
+cap "VPB" "A" 38.9455
+device msubckt sky130_fd_pr__nfet_01v8 82 52 83 53 l=30 w=168 "VNB" "A" 60 0 "VGND" 168 8904,442 "Y" 168 8904,442
+device msubckt sky130_fd_pr__pfet_01v8_hvt 82 367 83 368 l=30 w=252 "VPB" "A" 60 0 "VPWR" 252 13356,610 "Y" 252 13356,610
