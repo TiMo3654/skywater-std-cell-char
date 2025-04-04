@@ -1,0 +1,34 @@
+settings:
+  lib_name: sky130_fd_sc_lp
+  units:
+    time: ns
+    voltage: V
+    current: mA
+    pulling_resistance: kOhm
+    leakage_power: nW
+    capacitive_load: pF
+    energy: fJ
+  named_nodes:
+    vdd:
+      name: VPWR
+      voltage: 1.95
+    vss:
+      name: VGND
+      voltage: 0
+    pwell:
+      name: VNB
+      voltage: 0
+    nwell:
+      name: VPB
+      voltage: 1.95
+
+cells:
+ sky130_fd_sc_lp__inv_1:
+    netlist: ./sky130_inv1.spice
+    models: [/mnt/data/pdk/skywater/share/pdk/sky130A/libs.tech/ngspice/corners/tt.spice]
+    area: 3.1968
+    inputs: [A]
+    outputs: ['Y']
+    functions: [Y=!A]
+    slews: [0.001, 0.006, 0.010, 0.018, 0.031]
+    loads: [0.0, 0.009, 0.015, 0.08, 0.15]
