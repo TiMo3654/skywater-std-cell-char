@@ -21,11 +21,10 @@ settings:
     nwell:
       name: VPB
       voltage: 1.95
-
 cells:
  sky130_fd_sc_lp__inv_1:
     netlist: ./sky130_inv1.spice
-    models: [/mnt/data/pdk/skywater/share/pdk/sky130A/libs.tech/ngspice/corners/tt.spice]
+    models: [/mnt/data/pdk/skywater/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt]
     area: 3.1968
     inputs: [A]
     outputs: ['Y']

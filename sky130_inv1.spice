@@ -1,5 +1,7 @@
 * From /mnt/data/pdk/skywater/share/pdk/sky130A/libs.ref/sky130_fd_sc_lp/spice/sky130_fd_sc_lp.spice
 
+.param mc_mm_switch=0
+
 .SUBCKT sky130_fd_sc_lp__inv_1 A VGND VNB VPB VPWR Y
 X0 VPWR A Y VPB sky130_fd_pr__pfet_01v8_hvt w=1.26e+06u l=150000u
 X1 VGND A Y VNB sky130_fd_pr__nfet_01v8 w=840000u l=150000u
