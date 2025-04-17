@@ -20,7 +20,7 @@ settings['cells']['sky130_fd_sc_lp__inv_1']['netlist'] = "./../sky130_inv1.spice
 
 # Parameter setting
 
-vdds    = [0.9]
+vdds    = [1.8, 1.5, 1.2, 0.9, 0.85, 0.8, 0.75, 0.7, 0.65, 0.6, 0.55, 0.5]
 slews   = [0.01]
 loads   = [0.015]
 
@@ -41,7 +41,11 @@ for vdd in vdds:
 
     subprocess.run(['charlib', 'run', './'])
 
-    os.rename("./results/sky130_fd_sc_lp.lib", "./results/sky130_fd_sc_lp_" + str(vdd).replace(".","V") + ".lib")
+    filename = "./results/sky130_fd_sc_lp_" + str(vdd).replace(".","V") + ".lib"
+
+    os.rename("./results/sky130_fd_sc_lp.lib", filename)
+
+    print(f"Results stored in {filename}")
 
 
 # Clean up
